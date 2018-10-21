@@ -5,6 +5,7 @@ namespace Tests\Unit;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
+use App\User;
 
 class ExampleTest extends TestCase
 {
@@ -20,5 +21,12 @@ class ExampleTest extends TestCase
         $this->assertTrue(true);
     }
 
+    /**
+     * @test
+     */
+    public function can_create_user(){
+        factory(User::class)->create();
+        $this->assertCount(1,User::all());
+    }
 
 }
