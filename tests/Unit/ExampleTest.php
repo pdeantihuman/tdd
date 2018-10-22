@@ -20,13 +20,4 @@ class ExampleTest extends TestCase
     {
         $this->assertTrue(true);
     }
-
-    /**
-     * @test
-     */
-    public function can_create_user(){
-        factory(User::class)->create();
-        $this->assertCount(1,User::all());
-    }
-
 }
