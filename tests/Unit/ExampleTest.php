@@ -26,7 +26,7 @@ class ExampleTest extends TestCase
      */
     public function can_create_user(){
         factory(User::class)->create();
-        $this->assertCount(1,User::all());
+        $this->assertCount(2,User::all());
     }
 
 }
